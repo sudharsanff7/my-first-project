@@ -1,36 +1,45 @@
-# Professional HTML5 Code for Image Display
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <title>My Design Portfolio</title>
 </head>
 <body>
     <header>
         <h1>Welcome to My Design Portfolio</h1>
+        <p>Hi, I'm a professional designer. Feel free to contact me!</p>
     </header>
+
     <main>
         <section class="gallery">
-            <h2>Design Details</h2>
-            <figure>
-                <img src="ph1.jpg" alt="Design Example 1">
-                <figcaption>Design Example 1</figcaption>
-            </figure>
-            <figure>
-                <img src="ph2.jpg" alt="Design Example 2">
-                <figcaption>Design Example 2</figcaption>
-            </figure>
-            <figure>
-                <img src="ph3.jpg.crdownload" alt="Design Example 3">
-                <figcaption>Design Example 3</figcaption>
-            </figure>
+            <h2>My Work</h2>
+            <div class="grid-container">
+                <img src="s1.jpg" alt="Design 1" onclick="openModal(this);">
+                <img src="s2.jpg" alt="Design 2" onclick="openModal(this);">
+                <img src="s3.jpg" alt="Design 3" onclick="openModal(this);">
+                <img src="s4.jpg" alt="Design 4" onclick="openModal(this);">
+                <img src="s5.jpg" alt="Design 5" onclick="openModal(this);">
+                <img src="s6.jpg" alt="Design 6" onclick="openModal(this);">
+                <img src="s7.jpg" alt="Design 7" onclick="openModal(this);">
+                <img src="s8.jpg" alt="Design 8" onclick="openModal(this);">
+                <img src="s9.jpg" alt="Design 9" onclick="openModal(this);">
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>Phone: <a href="tel:9150945342">YOUR_PHONE_NUMBER</a></p>
+            <p>Email: <a href="mailto:sudharsans573@gmail.com">YOUR_EMAIL</a></p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 My Design Portfolio</p>
-    </footer>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
